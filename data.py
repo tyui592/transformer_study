@@ -108,8 +108,8 @@ def get_tokenizers(data='multi30k', task='en2de'):
             spacy_en.tokenizer.add_special_case(token, [{ORTH: token}])
             spacy_de.tokenizer.add_special_case(token, [{ORTH: token}])
 
-            en_tokenizer = spacy_en.tokenizer
-            de_tokenizer = spacy_de.tokenizer
+        en_tokenizer = spacy_en.tokenizer
+        de_tokenizer = spacy_de.tokenizer
 
         if task == 'en2de':
             res = {'src': en_tokenizer, 'dst': de_tokenizer}
